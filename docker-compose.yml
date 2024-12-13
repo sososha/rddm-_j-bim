@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./docker/frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./src/frontend:/app
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./docker/backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/backend:/usr/src/app
+    environment:
+      - RUST_LOG=debug
+      - DATABASE_URL=postgres://rddm_user:rddm_password@db:5432/rddm_db
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./docker/db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=rddm_db
+      - POSTGRES_USER=rddm_user
+      - POSTGRES_PASSWORD=rddm_password
+
+volumes:
+  postgres_data:

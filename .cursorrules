@@ -1,0 +1,38 @@
+# Cursor Rules for RDDM Project
+
+## 必須確認ファイル
+- dashboard.md          # プロジェクトの進行状況
+- rddm-definition.md    # RDDM方式の定義
+- 1.query.md           # プロジェクトの要件定義
+
+## コンポーネント定義ファイル
+- Graphics コンポーネント.md
+- UI コンポーネント.md
+- Window コンポーネント.md
+- CadKernel コンポーネント.md
+- docs/mvp/ui_ux/components.md
+- docs/mvp/ui_ux/flows.md
+- docs/mvp/ui_ux/styles.md
+
+## データモデル定義ファイル
+- docs/mvp/data_model/unified_model.md
+- docs/mvp/data_model/schema.md
+- docs/mvp/data_model/api.md
+
+## ルール
+1. セッション開始時に必ずdashboard.mdを確認すること
+2. コンテキストから外れないよう、上記ファイルを常に参照可能な状態に保つこと
+3. 作業開始前にdashboard.mdの進行状況を確認すること
+4. 作業完了時にdashboard.mdを更新すること
+5. 新規ファイル作成時は適切なディレクトリに配置すること
+6. コミット前に必須確認ファイルとの整合性を確認すること
+7. 実装前に必ず対応する詳細定義を確認すること
+
+## ディレクトリ構造
+/docs
+├── component/          # コンポーネント関連文書
+├── error/             # エラー処理関連文書
+├── performance/       # パフォーマンス関連文書
+├── test/             # テスト関連文書
+├── security/         # セキュリティ関連文書
+└── deployment/       # デプロイメント関連文書 
