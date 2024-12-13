@@ -32,7 +32,7 @@ RDDM J-BIMは、異なるビュー（間取り図、構造図、意匠図）間�
 - WebSocket (リアルタイム通信)
 
 ### データベース
-- PostgreSQL
+- SQLite
 
 ### 開発環境
 - Docker
@@ -51,8 +51,8 @@ RDDM J-BIMは、異なるビュー（間取り図、構造図、意匠図）間�
 
 1. リポジトリのクローン
 ```bash
-git clone https://github.com/your-org/rddm-j-bim.git
-cd rddm-j-bim
+git clone https://github.com/sososha/rddm-_j-bim.git
+cd rddm-_j-bim
 ```
 
 2. 環境変数の設定
@@ -100,4 +100,4 @@ cargo run
 
 ## ライセンス
 
-このプロジェクトは[MITライセンス](LICENSE)の下で公開されています。 
+このプロジェクトは[MITライセンス](LICENSE)の下で公開されています。
